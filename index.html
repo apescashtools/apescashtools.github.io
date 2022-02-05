@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="MoreGainStrategies">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>SmartBCH NFT Checker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Unofficial tools for <a href="gambling.apes.cash">gambling.apes.cash</a></h4>
+          <p>You can search for the combination of traits that you like, just fill some options and hit Search. There is a small fee in sBCH to be paid for each search.</p>
+          <p>You can click on an NFT's name to be taken to Oasis, and check if that NFT is on sale (please allow 10 seconds for the auction to load, until the performanc upgrade hits)</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://t.me/apescash" class="text-white">Find Gambling Apes on Telegram</a></li>
+            <li><a href="https://gitlab.com/matricz/reapers.tools" class="text-white">Many thanks to reapers.tools -- Site sources on Gitlab</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>Gambling Apes Selector</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">The unofficial but useful tools for the <a href="https://gambling.apes.cash">gambling.apes.cash</a> NFT collection on SmartBCH</h1>
+        <p class="lead">Instructions: Search for the combination of traits that you like by checking some options and then hit the search button.</p>
+        <p class="lead">There is a small fee in sBCH for each search.</p>
+        <p class="lead text-muted">Click on a NFT's name to be taken to the Oasis NFT marketplace. After the search has finished, the site automatically checks if the NFTs are offered for sale. This process may take a while. </p>
+        <p class="text-muted">Terms of Service: Only send payments on the SmartBCH network. No responsiblity for lost funds. Use at your own risk. This website is in the BETA stage. No user data is collected.</p>
+        <p class="lead">To use multiple selections on desktop, click while pressing Ctrl (Cmd on Mac).</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-2 col-md-8 mx-auto">
+          <label for="Background" class="form-label">Background</label>
+          <select class="form-select" id="Background" multiple="true">
+            <option value="">Any</option>
+            <option value="none">none (only specials)</option>
+            <option value="Gray">Gray</option>
+            <option value="New Punk Blue">New Punk Blue</option>
+            <option value="Blue">Blue</option>
+            <option value="Army Green">Army Green</option>
+            <option value="Aquamarine">Aquamarine</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Purple">Purple</option>
+          </select>
+        </div>
+
+        <div class="col-lg-2 col-md-8 mx-auto">
+          <label for="Fur" class="form-label">Fur</label>
+          <select class="form-select" id="Fur" multiple="true">
+            <option value="">Any</option>
+            <option value="none">none (only specials)</option>
+            <option value="Vampire">Vampire</option>
+            <option value="Alien">Alien</option>
+            <option value="Martian">Martian</option>
+            <option value="Skeleton">Skeleton</option>
+            <option value="Mummy">Mummy</option>
+            <option value="Solid Gold">Solid Gold</option>
+            <option value="Demon">Demon</option>
+            <option value="Trippy">Trippy</option>
+            <option value="Warlock">Warlock</option>
+            <option value="Orc">Orc</option>
+            <option value="Noise">Noise</option>
+            <option value="DMT">DMT</option>
+            <option value="Death Bot">Death Bot</option>
+            <option value="Robot">Robot</option>
+            <option value="Zombie">Zombie</option>
+            <option value="White">White</option>
+            <option value="Cheetah">Cheetah</option>
+            <option value="Red">Red</option>
+            <option value="Gray">Gray</option>
+            <option value="Blue">Blue</option>
+            <option value="Pink">Pink</option>
+            <option value="Cream">Cream</option>
+            <option value="Tan">Tan</option>
+            <option value="Golden Brown">Golden Brown</option>
+            <option value="Black">Black</option>
+            <option value="Dark Brown">Dark Brown</option>
+            <option value="Brown">Brown</option>
+
+          </select>
+        </div>  
+        <div class="col-lg-2 col-md-8 mx-auto">
+          <label for="Clothes" class="form-label">Clothes</label>
+          <select class="form-select" id="Clothes" multiple="true">
+            <option value="">Any</option>
+            <option value="Classic">Classic</option>
+            <option value="Leather Punk Jacket">Leather Punk Jacket</option>
+            <option value="Pimp">Pimp</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Denim">Denim</option>
+            <option value="Tracksuit">Tracksuit</option>
+            <option value="Vampire Cape">Vampire Cape</option>
+            <option value="Zipper Jacket">Zipper Jacket</option>
+            <option value="Ibiza">Ibiza</option>
+            <option value="Puff">Puff</option>
+            <option value="Fear and Loathing Shirt">Fear and Loathing Shirt</option>
+            <option value="Hawaiian 2">Hawaiian 2</option>
+            <option value="Pimp Coat">Pimp Coat</option>
+            <option value="Sleeveless With Chain">Sleeveless With Chain</option>
+            <option value="Kings Robe">Kings Robe</option>
+            <option value="Poker Suit">Poker Suit</option>
+            <option value="Bomber">Bomber</option>
+            <option value="Admirals Coat">Admirals Coat</option>
+            <option value="Black Suit">Black Suit</option>
+            <option value="Mage Robe">Mage Robe</option>
+            <option value="Space Suit">Space Suit</option>
+            <option value="Caveman Pelt">Caveman Pelt</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="Blue Dress">Blue Dress</option>
+            <option value="Service">Service</option>
+            <option value="Prom Dress">Prom Dress</option>
+            <option value="Tie Dye">Tie Dye</option>
+            <option value="Lumberjack Shirt">Lumberjack Shirt</option>
+            <option value="Tweed Suit">Tweed Suit</option>
+            <option value="Cowboy Shirt">Cowboy Shirt</option>
+            <option value="Biker Vest">Biker Vest</option>
+            <option value="Gac Tee Red">Gac Tee Red</option>
+            <option value="Gac Tee Black">Gac Tee Black</option>
+            <option value="Rainbow Suspenders">Rainbow Suspenders</option>
+            <option value="Black Holes T">Black Holes T</option>
+            <option value="Lab Coat">Lab Coat</option>
+            <option value="Bandolier">Bandolier</option>
+            <option value="Work Vest">Work Vest</option>
+            <option value="Stunt Jacket">Stunt Jacket</option>
+            <option value="Toga">Toga</option>
+            <option value="Bone Necklace">Bone Necklace</option>
+            <option value="Wool Turtleneck">Wool Turtleneck</option>
+            <option value="Sleeveless T">Sleeveless T</option>
+            <option value="Leather Jacket">Leather Jacket</option>
+            <option value="Bone T">Bone T</option>
+            <option value="Puffy Vest">Puffy Vest</option>
+            <option value="Guayabera">Guayabera</option>
+            <option value="Smoking Jacket">Smoking Jacket</option>
+            <option value="Prison Jumpsuit">Prison Jumpsuit</option>
+            <option value="Tuxedo T">Tuxedo T</option>
+            <option value="Vietnam Jacket">Vietnam Jacket</option>
+            <option value="Hawaiian">Hawaiian</option>
+            <option value="Tank Top">Tank Top</option>
+            <option value="Sailor Shirt">Sailor Shirt</option>
+            <option value="Navy Striped T">Navy Striped T</option>
+            <option value="Striped T">Striped T</option>
+            <option value="none">none</option>
+          </select>
+        </div>  
+        <div class="col-lg-2 col-md-8 mx-auto">
+          <label for="Eyes" class="form-label">Eyes</label>
+          <select class="form-select" id="Eyes" multiple="true">
+            <option value="">Any</option>
+            <option value="Chip">Chip</option>
+            <option value="Light Beam">Light Beam</option>
+            <option value="Alien">Alien</option>
+            <option value="Standard">Standard</option>
+            <option value="Vampire">Vampire</option>
+            <option value="Laser Eyes">Laser Eyes</option>
+            <option value="Spring">Spring</option>
+            <option value="Cyborg">Cyborg</option>
+            <option value="Crazy">Crazy</option>
+            <option value="Holographic">Holographic</option>
+            <option value="Heart">Heart</option>
+            <option value="Scumbag">Scumbag</option>
+            <option value="Sunglasses">Sunglasses</option>
+            <option value="3d">3d</option>
+            <option value="Teary">Teary</option>
+            <option value="Blindfold">Blindfold</option>
+            <option value="One Eye">One Eye</option>
+            <option value="Robot">Robot</option>
+            <option value="Coins">Coins</option>
+            <option value="X Eyes">X Eyes</option>
+            <option value="Eyepatch">Eyepatch</option>
+            <option value="Hypnotized">Hypnotized</option>
+            <option value="Zombie">Zombie</option>
+            <option value="Angry">Angry</option>
+            <option value="Sad">Sad</option>
+            <option value="Wide Eyed">Wide Eyed</option>
+            <option value="Closed">Closed</option>
+            <option value="Sleepy">Sleepy</option>
+            <option value="Bloodshot">Bloodshot</option>
+            <option value="Bored">Bored</option>
+          </select>
+        </div>  
+        <div class="col-lg-2 col-md-8 mx-auto">
+          <label for="Mouth" class="form-label">Mouth</label>
+          <select class="form-select" id="Mouth" multiple="true">
+            <option value="">Any</option>
+            <option value="none">none (only specials)</option>
+            <option value="Bored Unshaven Pizza">Bored Unshaven Pizza</option>
+            <option value="Bored Unshaven Dagger">Bored Unshaven Dagger</option>
+            <option value="Bored Dagger">Bored Dagger</option>
+            <option value="Grin Diamond Grill">Grin Diamond Grill</option>
+            <option value="Phoneme Aaa">Phoneme Aaa</option>
+            <option value="Grin Gold Grill">Grin Gold Grill</option>
+            <option value="Bored Unshaven Party Horn">Bored Unshaven Party Horn</option>
+            <option value="Discomfort Yellow Teeth">Discomfort Yellow Teeth</option>
+            <option value="Bored Pizza">Bored Pizza</option>
+            <option value="Grin Multicolored">Grin Multicolored</option>
+            <option value="Bored Unshaven Kazoo">Bored Unshaven Kazoo</option>
+            <option value="Bored Party Horn">Bored Party Horn</option>
+            <option value="Bored Unshaven Bubblegum">Bored Unshaven Bubblegum</option>
+            <option value="Bored Unshaven Pipe">Bored Unshaven Pipe</option>
+            <option value="Bored Kazoo">Bored Kazoo</option>
+            <option value="Bored Unshaven Cigar">Bored Unshaven Cigar</option>
+            <option value="Bored Cigar">Bored Cigar</option>
+            <option value="Bored Bubblegum">Bored Bubblegum</option>
+            <option value="Bored Pipe">Bored Pipe</option>
+            <option value="Phoneme Wah">Phoneme Wah</option>
+            <option value="Tongue Out">Tongue Out</option>
+            <option value="Discomfort">Discomfort</option>
+            <option value="Phoneme Oh">Phoneme Oh</option>
+            <option value="Phoneme L">Phoneme L</option>
+            <option value="Rage">Rage</option>
+            <option value="Jovial">Jovial</option>
+            <option value="Phoneme Ooo">Phoneme Ooo</option>
+            <option value="Small Grin">Small Grin</option>
+            <option value="Phoneme Vuh">Phoneme Vuh</option>
+            <option value="Bored Unshaven Cigarette">Bored Unshaven Cigarette</option>
+            <option value="Dumbfounded">Dumbfounded</option>
+            <option value="Grin">Grin</option>
+            <option value="Bored Cigarette">Bored Cigarette</option>
+            <option value="Bored Unshaven">Bored Unshaven</option>
+            <option value="Bored">Bored</option>            
+          </select>
+      </div>
+      <div class="col-lg-2 col-md-8 mx-auto">
+        <label for="Earring" class="form-label">Earring</label>
+        <select class="form-select" id="Earring" multiple="true">
+          <option value="">Any</option>
+          <option value="Cross">Cross</option>
+          <option value="Diamond Stud">Diamond Stud</option>
+          <option value="Gold Stud">Gold Stud</option>
+          <option value="Gold Hoop">Gold Hoop</option>
+          <option value="Silver Stud">Silver Stud</option>
+          <option value="Silver Hoop">Silver Hoop</option>
+          <option value="none">none</option>
+        </select>
+    </div>
+    <div class="col-lg-2 col-md-8 mx-auto">
+      <label for="Hat" class="form-label">Hat</label>
+      <select class="form-select" id="Hat" multiple="true">
+        <option value="">Any</option>
+        <option value="Do-Rag">Do-Rag</option>
+        <option value="Dealer">Dealer</option>
+        <option value="Scally Cap">Scally Cap</option>
+        <option value="Beer Hat">Beer Hat</option>
+        <option value="King's Crown">King's Crown</option>
+        <option value="Laurel Wreath">Laurel Wreath</option>
+        <option value="Warlock Hat">Warlock Hat</option>
+        <option value="Police Motorcycle Helmet">Police Motorcycle Helmet</option>
+        <option value="Trippy Captain's Hat">Trippy Captain's Hat</option>
+        <option value="Bandana Blue">Bandana Blue</option>
+        <option value="Party Hat 2">Party Hat 2</option>
+        <option value="Stuntman Helmet">Stuntman Helmet</option>
+        <option value="WWII Pilot Helmet">WWII Pilot Helmet</option>
+        <option value="Party Hat 1">Party Hat 1</option>
+        <option value="GAC Hat Red">GAC Hat Red</option>
+        <option value="Baby's Bonnet">Baby's Bonnet</option>
+        <option value="Girl's Hair Short">Girl's Hair Short</option>
+        <option value="Girl's Hair Pink">Girl's Hair Pink</option>
+        <option value="Faux Hawk">Faux Hawk</option>
+        <option value="Sushi Chef Headband">Sushi Chef Headband</option>
+        <option value="Spinner Hat">Spinner Hat</option>
+        <option value="Prussian Helmet">Prussian Helmet</option>
+        <option value="GAC Hat Black">GAC Hat Black</option>
+        <option value="Horns">Horns</option>
+        <option value="GAC Flipped Brim">GAC Flipped Brim</option>
+        <option value="Safari">Safari</option>
+        <option value="S&M Hat">S&M Hat</option>
+        <option value="Bunny Ears">Bunny Ears</option>
+        <option value="Vietnam Era Helmet">Vietnam Era Helmet</option>
+        <option value="Commie Hat">Commie Hat</option>
+        <option value="Irish Boho">Irish Boho</option>
+        <option value="Short Mohawk">Short Mohawk</option>
+        <option value="Bowler">Bowler</option>
+        <option value="Fisherman's Hat">Fisherman's Hat</option>
+        <option value="Sea Captain's Hat">Sea Captain's Hat</option>
+        <option value="Halo">Halo</option>
+        <option value="Army Hat">Army Hat</option>
+        <option value="Cowboy Hat">Cowboy Hat</option>
+        <option value="Fez">Fez</option>
+        <option value="Seaman's Hat">Seaman's Hat</option>
+        <option value="Beanie">Beanie</option>
+        <option value="none">none</option>
+      </select>
+    </div>
+    <div class="col-lg-2 col-md-8 mx-auto">
+      <label for="Profile" class="form-label">Profile</label>
+      <select class="form-select" id="Profile" multiple="true">
+        <option value="">Any</option>
+        <option value="Gac Vampire Vlad">Gac Vampire Vlad</option>
+        <option value="none">none (only specials)</option>
+        <option value="Gac Vampire">Gac Vampire</option>
+        <option value="Gac Alien">Gac Alien</option>
+        <option value="Gac Martian">Gac Martian</option>
+        <option value="Gac Skeleton">Gac Skeleton</option>
+        <option value="Gac Demon">Gac Demon</option>
+        <option value="Gac Warlock">Gac Warlock</option>
+        <option value="Gac Orc">Gac Orc</option>
+        <option value="Gac Ape">Gac Ape</option>
+      </select>
+    </div>
+    <div class="col-lg-2 col-md-8 mx-auto">
+      <label for="Special" class="form-label">Special</label>
+      <select class="form-select" id="Special" multiple="true">
+        <option value="">Any</option>
+        <option value="Amaury Sechet">Amaury Sechet</option>
+        <option value="JT">JT</option>
+        <option value="Jihan Wu">Jihan Wu</option>
+        <option value="John McAfee">John McAfee</option>
+        <option value="Keith Patrick">Keith Patrick</option>
+        <option value="Kim Dotcom">Kim Dotcom</option>
+        <option value="Kui Wang">Kui Wang</option>
+        <option value="Marc De Mesel">Marc De Mesel</option>
+        <option value="Naked Ape">Naked Ape</option>
+        <option value="Roger Ver">Roger Ver</option>
+        <option value="Satoshi Nakamoto">Satoshi Nakamoto</option>
+        <option value="emergent_reasons#100">emergent_reasons#100</option>
+        <option value="none">none</option>
+      </select>
+    </div>
+    <div class="col-lg-2 col-md-8 mx-auto">
+      <label for="trait_count" class="form-label">trait_count</label>
+      <select class="form-select" id="trait_count" multiple="true">
+        <option value="">Any</option>
+        <option value="2">2 (only specials)</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-8 mx-auto">
+        <input type="checkbox" id="onlyForSale"/> <label for="onlyForSale"> Show only NFTs for sale in results</label>
+        <button type="button" class="btn btn-primary my-2" onclick="requestpayment()">Search (0.0002 sBCH)</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-12 text-center">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2>
+                <span id="found">Status: Ready</span>
+                <span id="forsale"></span>  
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="album bg-light">
+    <div class="container">
+      <div class="row row-cols-12 row-cols-sm-2 row-cols-md-4 g-4" id="nfts">
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Template by &copy; Bootstrap</p>
+  </div>
+</footer
+>
+  <script src="bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="nfts.js"></script>
+  <script src="web3.min.js"></script>
+  <script src="NFTEXV2.js"></script>
+  <script src="jquery-3.6.0.slim.min.js"></script>
+  <script src="index.js"></script>
+      
+  </body>
+</html>
