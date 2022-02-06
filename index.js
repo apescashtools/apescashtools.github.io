@@ -58,7 +58,7 @@ function appendNft(nft, showPicture)
   htmlString += 
        `<div class="card-body">
         <p class="card-text"><a target="_blank" href="https://oasis.cash/token/`+nftCa+`/`+ nft.id +`"><b>`+ nft.id +`</b></a></p>
-        <p>Auction Status: <span id="nftstatus-`+ nft.id +`">loading</span></p>
+        <p><span id="nftstatus-`+ nft.id +`">Auction status loading</span></p>
         <span class="badge bg-secondary"><b>Background</b>: `+ nft.traits.Background +`</span>
         <span class="badge bg-secondary"><b>Fur</b>: `+ nft.traits.Fur +`</span>
         <span class="badge bg-secondary"><b>Clothes</b>: `+ nft.traits.Clothes +`</span>
@@ -167,7 +167,9 @@ async function requestpayment()
 
         $("#nfts").empty();
         nftsFound = [];
-        var forsale = 0;
+        cheapest = 21000000; // in BCH
+        mostExpensive = 0; // in BCH
+        var forsale = 0; // counter
 
         nfts.forEach
         (function(nft) 
@@ -179,7 +181,7 @@ async function requestpayment()
                   if (showMaxNfts >= nftsFound.length) appendNft(nft, true); else appendNft(nft, false);
                 }  
                 
-                if (showMaxNfts >= nftsFound.length) 
+                if ( showOnlyForSale || (showMaxNfts >= nftsFound.length) ) 
                 {
                   // only check oasis for the first matches
                   oasis.methods
@@ -202,11 +204,13 @@ async function requestpayment()
                                       var lastBidPrice = parseInt(result.lastBidPrice);
                                       var price = lastBidPrice > 0 ? lastBidPrice : startPrice;
                                       price /= divideForsBCH;
+                                      if (price < cheapest) cheapest = price;
+                                      if (price > mostExpensive) mostExpensive = price;
                                       if (showOnlyForSale) appendNft(nft, true);
-                                      var auctionText = orderType == 1 ? hammer +" "+ orderTypes[orderType] : hammer +" "+ orderTypes[orderType]+'@'+ price;
+                                      var auctionText = orderType == 1 ? hammer +" "+ orderTypes[orderType] : hammer +" "+ orderTypes[orderType]+'@'+ price + " BCH";
                                       $("#nftstatus-"+ nft.id).html(auctionText);
                                       forsale += 1;
-                                      $("#forsale").text(`(`+ forsale +` for sale)`);
+                                      $("#forsale").text(`(`+ forsale +` for sale between ` + cheapest + ` and ` + mostExpensive + ` BCH)`);
                                   } else {
                                       if (!showOnlyForSale) $("#nftstatus-"+ nft.id).text("Not for Sale.");
                                   }
