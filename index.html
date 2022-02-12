@@ -77,7 +77,7 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-3 col-md-6 mx-auto">
+      <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
         <label for="Background" class="form-label"><b>Background [9]</b></label>
         <select class="form-select" id="Background" multiple="true">
             <option value="">Any</option>
@@ -93,7 +93,7 @@
           </select>
         </div>
 
-        <div class="col-lg-3 col-md-6 mx-auto">
+        <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
           <label for="Fur" class="form-label"><b>Fur [28]</b></label>
           <select class="form-select" id="Fur" multiple="true">
             <option value="">Any</option>
@@ -128,7 +128,7 @@
 
           </select>
         </div>  
-        <div class="col-lg-3 col-md-6 mx-auto">
+        <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
           <label for="Clothes" class="form-label"><b>Clothes [56]</b></label>
           <select class="form-select" id="Clothes" multiple="true">
             <option value="">Any</option>
@@ -190,7 +190,7 @@
             <option value="none">none [2721]</option>
           </select>
         </div>  
-        <div class="col-lg-3 col-md-6 mx-auto">
+        <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
           <label for="Eyes" class="form-label"><b>Eyes [30]</b></label>
           <select class="form-select" id="Eyes" multiple="true">
             <option value="">Any</option>
@@ -226,7 +226,7 @@
             <option value="Bored">Bored [1195]</option>
           </select>
         </div>  
-        <div class="col-lg-3 col-md-6 mx-auto">
+        <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
           <label for="Mouth" class="form-label"><b>Mouth [36]</b></label>
           <select class="form-select" id="Mouth" multiple="true">
             <option value="">Any</option>
@@ -268,7 +268,7 @@
             <option value="Bored">Bored [1941]</option>            
           </select>
       </div>
-      <div class="col-lg-3 col-md-6 mx-auto">
+      <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
         <label for="Earring" class="form-label"><b>Earring [7]</b></label>
         <select class="form-select" id="Earring" multiple="true">
           <option value="">Any</option>
@@ -281,7 +281,7 @@
           <option value="none">none [5637]</option>
         </select>
     </div>
-    <div class="col-lg-3 col-md-6 mx-auto">
+    <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
       <label for="Hat" class="form-label"><b>Hat [42]</b></label>
       <select class="form-select" id="Hat" multiple="true">
         <option value="">Any</option>
@@ -329,13 +329,13 @@
         <option value="none">none [2822]</option>
       </select>
     </div>
-    <div class="col-lg-3 col-md-6 mx-auto">
+    <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
       <label for="Profile" class="form-label"><b>Profile [10]</b></label>
       <select class="form-select" id="Profile" multiple="true">
         <option value="">Any</option>
-        <option value="Gac Vampire Vlad">Gac Vampire Vlad [1]</option>
+        <!-- <option value="Gac Vampire Vlad">Gac Vampire Vlad [1]</option> -->
         <option value="none">none [12 (specials)]</option>
-        <option value="Gac Vampire">Gac Vampire [39]</option>
+        <option value="Gac Vampire">Gac Vampire [40]</option>
         <option value="Gac Alien">Gac Alien [42]</option>
         <option value="Gac Martian">Gac Martian [46]</option>
         <option value="Gac Skeleton">Gac Skeleton [52]</option>
@@ -345,7 +345,7 @@
         <option value="Gac Ape">Gac Ape [9552]</option>
       </select>
     </div>
-    <div class="col-lg-3 col-md-6 mx-auto">
+    <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
       <label for="Special" class="form-label"><b>Special [13]</b></label>
       <select class="form-select" id="Special" multiple="true">
         <option value="">Any</option>
@@ -364,7 +364,7 @@
         <option value="none">none [9988]</option>
       </select>
     </div>
-    <div class="col-lg-3 col-md-6 mx-auto">
+    <div class="col-lg-3 col-md-6 mx-auto" onchange="showFilterSettings()">
       <label for="trait_count" class="form-label"><b>trait_count [5]</b></label>
       <select class="form-select" id="trait_count" multiple="true">
         <option value="">Any</option>
@@ -375,14 +375,72 @@
         <option value="8">8 [3517]</option>
       </select>
     </div>
+    
+    
+    
+    <div class="input-group mb-3">
+     
+      <div class="input-group">
+        <div class="input-group-prepend mb-6">
+        <b>Min Rank</b>
+      </div>
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMin", "")'>clear</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMin", 1000)'>1000</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMin", 2000)'>2000</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMin", 5000)'>5000</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMin", 7000)'>7000</button>
+      </div>
+      <input id="rankMin" type="text" class="form-control" placeholder="" onchange="showFilterSettings()">
     </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend mb-6">
+        <b>Max Rank</b>
+      </div>
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMax", "")'>clear</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMax", 100)'>100</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMax", 1000)'>1000</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMax", 2000)'>2000</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("rankMax", 5000)'>5000</button>
+      </div>
+      <input id="rankMax" type="text" class="form-control" placeholder="" onchange="showFilterSettings()">
+    </div>
+
+    <div class="input-group">
+      <div class="input-group-prepend mb-6">
+      <b>Max Price</b>
+    </div>
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("priceMax", "")'>clear</button>
+        <button class="btn btn-outline-secondary" type="button" onclick='updateText("priceMax", 0.2)'>0.2 BCH</button>
+        <button class="btn btn-outline-secondary" type="button"  onclick='updateText("priceMax", 0.5)'>0.5 BCH</button>
+        <button class="btn btn-outline-secondary" type="button"  onclick='updateText("priceMax", 1)'>1 BCH</button>
+        <button class="btn btn-outline-secondary" type="button"  onclick='updateText("priceMax", 2)'>2 BCH</button>
+      </div>
+      <input id="priceMax" type="text" class="form-control" placeholder="" onchange="showFilterSettings()">
+    </div>
+
+  </div>
+
     <div class="row">
-      <div class="col-lg-4 col-md-8 mx-auto">
+      <div class="col-lg-12 col-md-12 mx-auto">
         <input type="checkbox" id="onlyForSale"/> <label for="onlyForSale"> Show only NFTs for sale in results</label>
         <button type="button" class="btn btn-primary my-2" onclick="requestpayment()">Search (0.0002 sBCH)</button>
+        <!-- <button type="button" class="btn btn-primary my-2" disabled id="txHistoryBtn" onclick="requestpayment2()" onchange="disableInputs()">Details about tx history (0.0002 sBCH)</button> -->
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <span id="filters">No filters set</span> 
       </div>
     </div>
   </section>
+
+
+  
 
   <div class="album py-5 bg-light">
     <div class="container">
